@@ -72,7 +72,16 @@ public class GridBehaviour : MonoBehaviour {
             else if (pressedCard.id == CardTypeId.POISON)
             {
                 life.currentLife -= 1;
-                if (life.currentLife == 0) SceneManager.LoadScene("Navigational");
+                if (life.currentLife == 0)
+                {
+                    int highscore = PlayerPrefs.GetInt("highscore", 0);
+                    if(score.value > highscore)
+                    {
+                        PlayerPrefs.SetInt("highscore", score.value);
+                    }
+                    
+                    SceneManager.LoadScene("Navigational");
+                }
             }
             else if (pressedCard.id == CardTypeId.LIFE)
             {
