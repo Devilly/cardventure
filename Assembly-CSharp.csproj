@@ -65,7 +65,7 @@
     <Compile Include="Assets\Resources\Scriptables\Life\Life.cs" />
     <Compile Include="Assets\Resources\Scriptables\Score\Score.cs" />
     <Compile Include="Assets\Resources\Scripts\CardBehaviour.cs" />
-    <Compile Include="Assets\Resources\Scripts\FillGrid.cs" />
+    <Compile Include="Assets\Resources\Scripts\GridBehaviour.cs" />
     <Compile Include="Assets\Resources\Scripts\ResetState.cs" />
     <Compile Include="Assets\Resources\Scripts\ShowLife.cs" />
     <Compile Include="Assets\Resources\Scripts\ShowScore.cs" />

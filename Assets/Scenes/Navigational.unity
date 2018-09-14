@@ -231,8 +231,8 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 180, y: 180}
-  m_Spacing: {x: 60, y: 20}
+  m_CellSize: {x: 250, y: 250}
+  m_Spacing: {x: 90, y: 30}
   m_Constraint: 1
   m_ConstraintCount: 5
 --- !u!114 &138825204
@@ -281,6 +281,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 1746168717471526, guid: 2fc4572596611dd4cbc9f4294a478ddc, type: 2}
+  playerPrefab: {fileID: 1091346405215216, guid: b2cf5c2330837f641afd3045446e275f,
+    type: 2}
+  score: {fileID: 11400000, guid: f31f4ce3eaad67c408e9d448251e77a8, type: 2}
+  life: {fileID: 11400000, guid: f68562ca81ee96547953b6d24a2c7b4b, type: 2}
+  cardTypesToUse:
+  - {fileID: 11400000, guid: 0390da2c6a2e4714db5ccd1768d42b7d, type: 2}
+  - {fileID: 11400000, guid: 5f687fd6847b3024cb65cf20bbeb90d2, type: 2}
+  - {fileID: 11400000, guid: 158df3d4033e8d74d89f821f6107684f, type: 2}
+  - {fileID: 11400000, guid: b6fedf6ef1776a74ea76e03b19e69d60, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,12 +426,12 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
