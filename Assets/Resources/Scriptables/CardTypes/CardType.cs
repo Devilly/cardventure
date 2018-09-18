@@ -9,5 +9,5 @@ public class CardType : ScriptableObject {
 
 public enum CardTypeId
 {
-    PLUSONE, PLUSTWO, POISON, LIFE, BOMB, BOMB_LIFES
+    PLUSONE, PLUSTWO, POISON, LIFE, GOLD_LIFE, BOMB, BOMB_LIFES
 }

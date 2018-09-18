@@ -68,6 +68,7 @@
     <Compile Include="Assets\Resources\Scripts\GridBehaviour.cs" />
     <Compile Include="Assets\Resources\Scripts\ResetState.cs" />
     <Compile Include="Assets\Resources\Scripts\ShowEmotion.cs" />
+    <Compile Include="Assets\Resources\Scripts\ShowGoldLife.cs" />
     <Compile Include="Assets\Resources\Scripts\ShowHighscore.cs" />
     <Compile Include="Assets\Resources\Scripts\ShowLife.cs" />
     <Compile Include="Assets\Resources\Scripts\ShowScore.cs" />

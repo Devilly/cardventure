@@ -12,6 +12,9 @@ public class GridBehaviour : MonoBehaviour {
 
     public Score score;
     public Life life;
+    public Life goldLife;
+
+    public int goldLifeRequiredPoints;
 
     public CardType[] cardTypesToUse;
     List<CardType> weightedList;
@@ -44,6 +47,8 @@ public class GridBehaviour : MonoBehaviour {
 
     private void HandleCardUsage(int y, int x)
     {
+        int scoreBeforeCardUsage = score.value;
+
         if ((System.Math.Abs(x - playerPositionX) == 1 && System.Math.Abs(y - playerPositionY) == 0) ||
             (System.Math.Abs(x - playerPositionX) == 0 && System.Math.Abs(y - playerPositionY) == 1))
         {
@@ -62,19 +67,31 @@ public class GridBehaviour : MonoBehaviour {
                 life.currentLife -= 1;
                 if (life.currentLife == 0)
                 {
-                    int highscore = PlayerPrefs.GetInt("highscore", 0);
-                    if(score.value > highscore)
+                    if(goldLife.currentLife == 1)
                     {
-                        PlayerPrefs.SetInt("highscore", score.value);
+                        goldLife.currentLife = 0;
+                        life.currentLife = 3;
+                    } else
+                    {
+                        int highscore = PlayerPrefs.GetInt("highscore", 0);
+                        if (score.value > highscore)
+                        {
+                            PlayerPrefs.SetInt("highscore", score.value);
+                        }
+
+                        SceneManager.LoadScene("Navigational");
                     }
-                    
-                    SceneManager.LoadScene("Navigational");
                 }
             }
             else if (pressedCard.id == CardTypeId.LIFE)
             {
                 life.currentLife += 1;
                 if (life.currentLife > life.maximumLife) life.currentLife = life.maximumLife;
+            }
+            else if(pressedCard.id == CardTypeId.GOLD_LIFE)
+            {
+                goldLife.currentLife += 1;
+                if(goldLife.currentLife > goldLife.maximumLife) goldLife.currentLife = goldLife.maximumLife;
             }
 
             if (pressedCard.id == CardTypeId.BOMB)
@@ -90,7 +107,16 @@ public class GridBehaviour : MonoBehaviour {
                 SetCards(CardTypeId.LIFE);
             } else
             {
-                CardType newCardType = weightedList.ElementAt(random.Next(0, weightedList.Count));
+                CardType newCardType;
+                if (score.value % goldLifeRequiredPoints < scoreBeforeCardUsage % goldLifeRequiredPoints)
+                {
+                    newCardType = FindCardTypeById(CardTypeId.GOLD_LIFE);
+                } else
+                {
+                    newCardType = weightedList.ElementAt(random.Next(0, weightedList.Count));
+                }
+
+                
                 cards[playerPositionY, playerPositionX] = newCardType;
 
                 playerPositionY = y;
@@ -120,16 +146,21 @@ public class GridBehaviour : MonoBehaviour {
                         newCardType = weightedList.ElementAt(random.Next(0, weightedList.Count));
                     } else
                     {
-                        newCardType = Array.Find(cardTypesToUse, entry =>
-                        {
-                            return entry.id == cardTypeId;
-                        });
+                        newCardType = FindCardTypeById((CardTypeId) cardTypeId);
                     }
 
                     cards[y, x] = newCardType;
                 }
             }
         }
+    }
+
+    private CardType FindCardTypeById(CardTypeId id)
+    {
+        return Array.Find(cardTypesToUse, entry =>
+        {
+            return entry.id == id;
+        });
     }
 
     void PlaceCards()

@@ -233,8 +233,8 @@ MonoBehaviour:
   m_StartAxis: 0
   m_CellSize: {x: 250, y: 250}
   m_Spacing: {x: 90, y: 30}
-  m_Constraint: 1
-  m_ConstraintCount: 5
+  m_Constraint: 0
+  m_ConstraintCount: 150
 --- !u!114 &138825204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +285,8 @@ MonoBehaviour:
     type: 2}
   score: {fileID: 11400000, guid: f31f4ce3eaad67c408e9d448251e77a8, type: 2}
   life: {fileID: 11400000, guid: f68562ca81ee96547953b6d24a2c7b4b, type: 2}
+  goldLife: {fileID: 11400000, guid: a25a5b86fdaea6e488ce97546f33a751, type: 2}
+  goldLifeRequiredPoints: 150
   cardTypesToUse:
   - {fileID: 11400000, guid: 0390da2c6a2e4714db5ccd1768d42b7d, type: 2}
   - {fileID: 11400000, guid: 5f687fd6847b3024cb65cf20bbeb90d2, type: 2}
@@ -292,6 +294,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b6fedf6ef1776a74ea76e03b19e69d60, type: 2}
   - {fileID: 11400000, guid: 917ac8ae264f03341803f212780bd756, type: 2}
   - {fileID: 11400000, guid: 74138977367199347a7857b43259b458, type: 2}
+  - {fileID: 11400000, guid: dd5f37f73113d474e9f7d4b283ea5e82, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: {fileID: 11400000, guid: f68562ca81ee96547953b6d24a2c7b4b, type: 2}
+  goldLife: {fileID: 11400000, guid: a25a5b86fdaea6e488ce97546f33a751, type: 2}
   score: {fileID: 11400000, guid: f31f4ce3eaad67c408e9d448251e77a8, type: 2}
 --- !u!20 &519420031
 Camera:

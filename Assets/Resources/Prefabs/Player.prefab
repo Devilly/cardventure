@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 224583555353342326}
   - component: {fileID: 222225417255062200}
   - component: {fileID: 114345295559471714}
+  - component: {fileID: 114054915584222632}
   m_Layer: 5
   m_Name: Heart_Gold
   m_TagString: Untagged
@@ -100,6 +101,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114054915584222632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387548068495720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d8890ee38de90e48b3f8320cc0ae334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldLife: {fileID: 11400000, guid: a25a5b86fdaea6e488ce97546f33a751, type: 2}
+  coloredHeart: {fileID: 21300000, guid: 1ada477a876fca744bc91de337f907cb, type: 3}
+  greyHeart: {fileID: 21300000, guid: 0805f51c9e1cd6b468df66974a662a99, type: 3}
 --- !u!114 &114107339085863406
 MonoBehaviour:
   m_ObjectHideFlags: 1

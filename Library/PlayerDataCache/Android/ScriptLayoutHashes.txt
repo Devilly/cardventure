@@ -101,6 +101,7 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 0ddb2c46096a1e59e0dce07886ce4769 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 64f3a13c1277a7f1324321d93d0ec13b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 66b3109aa5921cf800bec17926c6adba Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
+11605be5444a1069a03a8fba88bd5e46 Assembly-CSharp.dll:.ShowEmotion
 201273fb4f889724fb090164b7d6c657 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 486cd95c82d8305219c352c06b776e1f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 0f27c39183b9eb95eba0a228bea28273 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -165,11 +166,11 @@ dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 105690c11079f3facf4b1b2654ed6b1f Assembly-CSharp.dll:.Score
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-6259cc354060585ce444c6ecf49c4397 Assembly-CSharp.dll:.GridBehaviour
-760bdb78b95d32898d307b68de24e33f Assembly-CSharp.dll:.ResetState
+ae8703682a1b44697cfedf3cf9a402aa Assembly-CSharp.dll:.GridBehaviour
+f5bd0b6d91c723ba96967da2e478a86c Assembly-CSharp.dll:.ResetState
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
-87bbd76df48a0daaa79d4fdfa98913f9 Assembly-CSharp.dll:.Life
-11605be5444a1069a03a8fba88bd5e46 Assembly-CSharp.dll:.ShowEmotion
+9f565644f1864a292e5d7690150274b6 Assembly-CSharp.dll:.Life
+c0d0fb9c2927516c699ad58593bebeca Assembly-CSharp.dll:.ShowGoldLife
