@@ -6,36 +6,33 @@ using UnityEngine.UI;
 public class ShowLife : MonoBehaviour {
 
     public Life life;
-
-    public GameObject heartPrefab;
+    
     public Sprite coloredHeart;
     public Sprite greyHeart;
 
+    private Image image;
+
+    [Range(1, 3)]
+    public int onFromHowManyLifes;
+
 	void Start () {
-        GenerateImages();
+        image = GetComponent<Image>();
+
+        SetImage();
 	}
 	
 	void Update () {
-        GenerateImages();
+        SetImage();
 	}
 
-    private void GenerateImages()
+    private void SetImage()
     {
-        foreach(Transform childTransform in transform)
+        if(life.currentLife >= onFromHowManyLifes)
         {
-            Destroy(childTransform.gameObject);
-        }
-
-        for(int x = 0; x < life.currentLife; x++)
+            image.sprite = coloredHeart;
+        } else
         {
-            GameObject newHeart = Instantiate(heartPrefab, transform);
-            newHeart.GetComponent<Image>().sprite = coloredHeart;
-        }
-
-        for (int x = 0; x < life.maximumLife - life.currentLife; x++)
-        {
-            GameObject newHeart = Instantiate(heartPrefab, transform);
-            newHeart.GetComponent<Image>().sprite = greyHeart;
+            image.sprite = greyHeart;
         }
     }
 }

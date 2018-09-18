@@ -4,7 +4,7 @@ C:/Users/deslo/OneDrive/cardventure.apk
 SceneListBegin?
 Assets/Scenes/Navigational.unity
 SceneListEnd?
-afb48ef9859d98464dbcaa07e0b57f75 Assembly-CSharp.dll:.ShowLife
+1a1ef1307c40d3583310d123ab48384c Assembly-CSharp.dll:.ShowLife
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -172,3 +172,4 @@ e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 87bbd76df48a0daaa79d4fdfa98913f9 Assembly-CSharp.dll:.Life
+11605be5444a1069a03a8fba88bd5e46 Assembly-CSharp.dll:.ShowEmotion
