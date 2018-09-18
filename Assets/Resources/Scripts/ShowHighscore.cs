@@ -14,6 +14,6 @@ public class ShowHighscore : MonoBehaviour {
 
     private void SetText()
     {
-        text.text = "HIghscore: " + PlayerPrefs.GetInt("highscore", 0);
+        text.text = "Highscore: " + PlayerPrefs.GetInt("highscore", 0);
     }
 }

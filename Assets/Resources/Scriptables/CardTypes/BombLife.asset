@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fb0f82c4a955b44a5d21f40f752979, type: 3}
+  m_Name: BombLife
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 2010bbd420d4dcb49b023275e58ff35e, type: 3}
+  weight: 1
+  id: 5

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GridBehaviour : MonoBehaviour {
 
@@ -25,8 +26,8 @@ public class GridBehaviour : MonoBehaviour {
         random = new System.Random();
         cards = new CardType[3,5];
 
-        playerPositionX = 0;
-        playerPositionY = 0;
+        playerPositionX = 2;
+        playerPositionY = 1;
 
         weightedList = new List<CardType>();
         foreach (CardType cardType in cardTypesToUse)
@@ -37,21 +38,8 @@ public class GridBehaviour : MonoBehaviour {
             }
         }
 
-        for (int y = 0; y < cards.GetLength(0); y++)
-        {
-            for (int x = 0; x < cards.GetLength(1); x++)
-            {
-                if (x == playerPositionX && y == playerPositionY) {
-                    cards[y, x] = null;
-                } else
-                {
-                    CardType newCardType = weightedList.ElementAt(random.Next(0, weightedList.Count));
-                    cards[y, x] = newCardType;
-                }
-            }
-        }
-
-        SetCards();
+        SetCards(null);
+        PlaceCards();
 	}
 
     private void HandleCardUsage(int y, int x)
@@ -89,18 +77,62 @@ public class GridBehaviour : MonoBehaviour {
                 if (life.currentLife > life.maximumLife) life.currentLife = life.maximumLife;
             }
 
-            CardType newCardType = weightedList.ElementAt(random.Next(0, weightedList.Count));
-            cards[playerPositionY, playerPositionX] = newCardType;
+            if (pressedCard.id == CardTypeId.BOMB)
+            {
+                playerPositionY = y;
+                playerPositionX = x;
+                SetCards(null);
+            }
+            else if (pressedCard.id == CardTypeId.BOMB_LIFES)
+            {
+                playerPositionY = y;
+                playerPositionX = x;
+                SetCards(CardTypeId.LIFE);
+            } else
+            {
+                CardType newCardType = weightedList.ElementAt(random.Next(0, weightedList.Count));
+                cards[playerPositionY, playerPositionX] = newCardType;
 
-            playerPositionY = y;
-            playerPositionX = x;
-            cards[y, x] = null;
+                playerPositionY = y;
+                playerPositionX = x;
+                cards[y, x] = null;
+            }
 
-            SetCards();
+            PlaceCards();
         }
     }
 
-    void SetCards()
+    void SetCards(CardTypeId? cardTypeId)
+    {
+        for (int y = 0; y < cards.GetLength(0); y++)
+        {
+            for (int x = 0; x < cards.GetLength(1); x++)
+            {
+                if (x == playerPositionX && y == playerPositionY)
+                {
+                    cards[y, x] = null;
+                }
+                else
+                {
+                    CardType newCardType;
+                    if(cardTypeId == null)
+                    {
+                        newCardType = weightedList.ElementAt(random.Next(0, weightedList.Count));
+                    } else
+                    {
+                        newCardType = Array.Find(cardTypesToUse, entry =>
+                        {
+                            return entry.id == cardTypeId;
+                        });
+                    }
+
+                    cards[y, x] = newCardType;
+                }
+            }
+        }
+    }
+
+    void PlaceCards()
     {
         foreach(Transform childTransform in transform)
         {

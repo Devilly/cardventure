@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: PlusTwo
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: c2b454d07fee2e940bbed9d930942bc7, type: 3}
-  weight: 6
+  weight: 110
   id: 1
