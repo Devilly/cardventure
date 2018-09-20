@@ -2,7 +2,9 @@ Android
 PlayerPath?
 C:/Users/deslo/OneDrive/cardventure.apk
 SceneListBegin?
+Assets/Scenes/Menu.unity
 Assets/Scenes/Navigational.unity
+Assets/Scenes/RestartOrExit.unity
 SceneListEnd?
 1a1ef1307c40d3583310d123ab48384c Assembly-CSharp.dll:.ShowLife
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
@@ -174,3 +176,6 @@ e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 c0d0fb9c2927516c699ad58593bebeca Assembly-CSharp.dll:.ShowGoldLife
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 9f565644f1864a292e5d7690150274b6 Assembly-CSharp.dll:.Life
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Play
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Exit
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Restart

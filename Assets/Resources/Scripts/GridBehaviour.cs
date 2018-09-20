@@ -79,7 +79,7 @@ public class GridBehaviour : MonoBehaviour {
                             PlayerPrefs.SetInt("highscore", score.value);
                         }
 
-                        SceneManager.LoadScene("Navigational");
+                        SceneManager.LoadScene("RestartOrExit");
                     }
                 }
             }

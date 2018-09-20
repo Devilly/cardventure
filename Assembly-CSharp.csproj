@@ -65,8 +65,11 @@
     <Compile Include="Assets\Resources\Scriptables\Life\Life.cs" />
     <Compile Include="Assets\Resources\Scriptables\Score\Score.cs" />
     <Compile Include="Assets\Resources\Scripts\CardBehaviour.cs" />
+    <Compile Include="Assets\Resources\Scripts\Exit.cs" />
     <Compile Include="Assets\Resources\Scripts\GridBehaviour.cs" />
+    <Compile Include="Assets\Resources\Scripts\Play.cs" />
     <Compile Include="Assets\Resources\Scripts\ResetState.cs" />
+    <Compile Include="Assets\Resources\Scripts\Restart.cs" />
     <Compile Include="Assets\Resources\Scripts\ShowEmotion.cs" />
     <Compile Include="Assets\Resources\Scripts\ShowGoldLife.cs" />
     <Compile Include="Assets\Resources\Scripts\ShowHighscore.cs" />
