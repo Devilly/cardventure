@@ -11,5 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc223bf09acbbd499e1899d5bc9aeb2, type: 3}
   m_Name: Life
   m_EditorClassIdentifier: 
+  defaultLife: 3
   maximumLife: 3
   currentLife: 3

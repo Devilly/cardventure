@@ -171,6 +171,6 @@ f5bd0b6d91c723ba96967da2e478a86c Assembly-CSharp.dll:.ResetState
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
+c0d0fb9c2927516c699ad58593bebeca Assembly-CSharp.dll:.ShowGoldLife
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 9f565644f1864a292e5d7690150274b6 Assembly-CSharp.dll:.Life
-c0d0fb9c2927516c699ad58593bebeca Assembly-CSharp.dll:.ShowGoldLife
