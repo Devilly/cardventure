@@ -192,5 +192,13 @@ public class GridBehaviour : MonoBehaviour {
         newCard.GetComponent<CardBehaviour>().y = y;
         newCard.GetComponent<CardBehaviour>().x = x;
         newCard.GetComponent<Image>().sprite = cardType.sprite;
+
+        if(!((Math.Abs(x - playerPositionX) == 0 && Math.Abs(y - playerPositionY) == 1) ||
+            (Math.Abs(x - playerPositionX) == 1 && Math.Abs(y - playerPositionY) == 0))) {
+
+            Color color = newCard.GetComponent<Image>().color;
+            color.a = .4f;
+            newCard.GetComponent<Image>().color = color;
+        }
     }
 }
